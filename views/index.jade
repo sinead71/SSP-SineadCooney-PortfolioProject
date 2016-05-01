@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    div.row
+        div.col-md-4.col-md-offset-4
+            form(method='post', action='/home')               
+        div.col-md-8.col-md-offset-2
+            .mainImage 
+                h1.name Sinead Cooney 
+                h2 Portfolio
+        div.col-md-2
+        div.col-md-4.col-md-offset-2
+        div.col-md-3.col-md-offset-1
+            .uploadInfo
+                h2.uploadHeading Log in or sign up to upload your work.
+                br
+                <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
+                br
+                br  
+                form(method='post', action='/logIn')                
+                    input.btn.btn-success(type="submit", id="logInBtn", value="Log In") 
+                form(method='post', action='signUp')
+                    input.btn.btn-success(type="submit", id="signUpBtn", value="Sign Up")
+                    
+                   
+        
+            
+

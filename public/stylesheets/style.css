@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.mainImage{
+    height: 330px;
+    margin-left:5%;
+    margin-right:5%;
+    border-radius: 10px;
+    background-image: url("../images/mainImage.png");
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    margin-top:50px;
+    text-align: center;
+    color:#F8F1FF;
+}
+
+h1.name{
+    margin-top:10px;
+    color:#F8F1FF;
+}
+
+.uploadInfo{
+    margin-right:13.5%;
+    text-align: center;
+    background-color: #B8C4BB;
+    border-radius: 10px;
+    height: 300px;
+}
+
+#logInBtn{
+    margin-right: 5%;
+    margin-left: 16%; 
+    float: left; 
+    width:30%;
+}
+
+#signUpBtn{
+    float: left;
+    width:30%;
+}
+
+h2.uploadHeading{
+    color:black;  
+    padding-top: 20px; 
+}
+
+.glyphicon{
+    font-size: 8em;
+}
+
+#browseBtn{
+    display: inline-block;
+    color: #00B7FF;
+    text-align: center;
+    padding: 10px;
+}
+
+.uploadForm{
+    text-align: center;
+    padding:20px;
+    
+}
+
+#logoutBtn{
+    margin-top:8px;
+    margin-right:3px;
+}

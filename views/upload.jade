@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    div.row
+        div.col-md-4.col-md-offset-4
+            form(method='post', action='/upload')
+            h1(style = "text-align: center;") Upload Your Work 
+            .uploadForm
+                input(type='file', name='file', id="browseBtn", autofocus)
+            

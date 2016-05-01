@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    br
+    br
+    br
+    br
+    div.row
+        div.col-md-4.col-md-offset-4
+            h1(style = "text-align: center;") Log In    
+                form(method='post', action='/logIn')
+                    div.form-group
+                        label(for='yourName') 
+                        input.form-control(type='text', id="yourName", placeholder='Username', name='yourName', autofocus)
+                        label(for='youPassword') 
+                        input.form-control(type='text',id="yourPassword", placeholder='Password', name='yourPassword', autofocus)
+                        br
+                    input.btn.btn-success(type='submit', value='Log In')
+        
