@@ -5,9 +5,9 @@ var fs = require('fs');
 var files = new Array();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/)', function(req, res, next){
+    res.render('logIn');
+})
 
 router.get('/uploadFile', function (req, res, next){
     res.render('fileUpload');
