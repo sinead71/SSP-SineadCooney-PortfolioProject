@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 
+var allUploads = [];
+var uploadsNumber = 1;
+
 var files = new Array();
 
 /* GET home page. */
@@ -75,8 +78,29 @@ router.get('/upload', function(req, res, next){
 });
 
 router.post('/upload', function(req, res, next){
-    console.log('upload test');
-    res.render('upload');
+    
+    var uploads = {};    
+    uploads.id = uploadsNumber++;  
+    uploads.date = new Date();    
+    uploads.uploads = req.body.newUpload;
+    allUploads.push(uploads); 
+    console.log(allUploads);
+    res.render('images', {allUploas: allUploads});
+});
+
+router.get('/uploadFile', function (req, res, next){
+    res.render('fileUpload');
+});
+
+router.post('/uploadFile', function ( req, res, next){
+    console.log("In POST /uploadFile");
+    console.log(req.files[0].filename);
+    
+    req.files[0]._id = Date.now();
+    console.log(req.files[0]);
+    
+    files.push(req.files[0]);
+    res.redirect('/files');
 });
 
 

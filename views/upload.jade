@@ -6,5 +6,7 @@ block content
             form(method='post', action='/upload')
             h1(style = "text-align: center;") Upload Your Work 
             .uploadForm
-                input(type='file', name='file', id="browseBtn", autofocus)
-            
+                input(type='file', name='newUpload', id="newUpload", autofocus)
+                br
+                br
+                input.btn.btn-success(type='submit', value='Upload')
